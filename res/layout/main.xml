@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:id="@+id/nowPlayingBar" android:background="@drawable/background_music_1">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="5">
+            <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/progressFill"
+                        android:background="@drawable/progress_fill_playing"
+                        android:layout_weight="1"/>
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/progressCase"
+                        android:background="@drawable/progress_case_playing"
+                        android:layout_weight="1"/>
+            </GridLayout>
+        </LinearLayout>
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/playPauseMusic" android:layout_gravity="center_horizontal|bottom"
+                    android:layout_alignParentBottom="false" android:layout_alignParentLeft="false"
+                    android:layout_centerInParent="true" android:background="@drawable/play_music"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nextMusic" android:layout_gravity="center_horizontal|bottom"
+                    android:layout_toRightOf="@+id/playPauseMusic" android:layout_alignTop="@+id/playPauseMusic"
+                    android:background="@drawable/next_music"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/randomMusic" android:layout_gravity="center_horizontal|bottom"
+                    android:layout_toRightOf="@+id/nextMusic" android:layout_alignTop="@+id/playPauseMusic"
+                    android:background="@drawable/row_music"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastMusic" android:layout_gravity="center_horizontal|bottom"
+                    android:layout_toLeftOf="@+id/playPauseMusic" android:layout_alignTop="@+id/playPauseMusic"
+                    android:background="@drawable/last_music"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/randomMusic" android:layout_gravity="center_horizontal|bottom"
+                    android:layout_toLeftOf="@+id/lastMusic" android:layout_alignTop="@+id/playPauseMusic"
+                    android:background="@drawable/repeat_all_music"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollBar" android:layout_gravity="center"
+            android:layout_weight="1" android:fillViewport="false">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="91dp"
+                    android:id="@+id/imageView" android:background="@drawable/background_seperator"
+                    android:layout_alignTop="@+id/upButton" android:layout_alignBottom="@+id/upButton"
+                    android:adjustViewBounds="false"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/upButton" android:layout_gravity="center_horizontal"
+                    android:background="@drawable/up_imbutton" android:layout_alignParentLeft="false"
+                    android:layout_marginLeft="0dp" android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="false" android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/downButton" android:layout_gravity="center_horizontal"
+                    android:background="@drawable/down_imbutton" android:focusableInTouchMode="false"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
+
